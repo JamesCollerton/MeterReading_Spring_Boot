@@ -2,4 +2,45 @@
 
 # Meter Reading API #
 
-This is a meter reading API I did as a project to learn API design in Spring Boot.
+This is a meter reading API I did as a project to learn API design in Spring Boot, it can accept and present readings at various URIs. The tech stack includes:
+
+* Spring Boot: Used to implement project.
+* Spring Data: Handles DB interaction.
+* Lombok: Simplifies data objects.
+* H2: Embedded database for production and testing.
+* Swagger: API documentation.
+* Aspect Orientated Programming: Used for logging.
+* Travis CI: Builds and testing.
+
+## Design ##
+
+### Accepting Meter Readings ###
+
+This accepts meter readings of the schema:
+
+```
+ {
+     "customerId": "identifier123",
+     "serialNumber": "27263927192",
+     "mpxn": "14582749",
+     "read": [
+         {"type": "ANYTIME", "registerId": "387373", "value": "2729"},
+         {"type": "NIGHT", "registerId": "387373", "value": "2892"}
+     ],
+     "readDate": "2017-11-20T16:19:48+00:00Z"
+ }
+```
+
+to POST requests at URI `/meter-read`.
+
+### Presenting Meter Readings ###
+
+This will present meter readings from the URI `/meter-read`, and takes two parameters:
+
+* Customer Id: The customer Id to search for.
+* Serial Number: The serial number to search for.
+
+It will then return all meter readings currently stored in the database matching those criteria.
+
+
+
