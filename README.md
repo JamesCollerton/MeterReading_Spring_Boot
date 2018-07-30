@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/JamesCollerton/MeterReading_Spring_Boot.svg?branch=master)](https://travis-ci.com/JamesCollerton/MeterReading_Spring_Boot)
+[![Build Status](https://travis-ci.com/JamesCollerton/MeterReading_Spring_Boot.svg?branch=master)](https://travis-ci.com/JamesCollerton/Meter_Reading_Spring_Boot)
 
 # Meter Reading API #
 
